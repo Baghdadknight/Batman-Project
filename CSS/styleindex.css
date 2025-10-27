@@ -1,0 +1,261 @@
+/*css reset*/
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav {
+  width: 60%;
+}
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+  color: #14add8;
+  cursor: pointer;
+  font-size: 40px;
+  transition: 0.5s;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+li:hover {
+  color: aliceblue;
+}
+
+#logo {
+  width: 30%;
+  height: auto;
+}
+/* até aqui é o padrao, apenas com o tamanho da fonte em 35px ao inves de 40*/
+#logodiv{
+  display: flex;
+  justify-content: center;
+}
+
+#banner {
+  background-image: url(../Graphics/banner\ batman\ blue\ center\ logos.jpeg);
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+.overlay-image{
+  width: 33,3%;
+  height: 600px;
+  scale: 50%;
+  display: 
+}
+.separador {
+  width: 100%;
+  height: 50px;
+}
+#trailer-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: ;
+}
+.trailer {
+  width: 50%;
+  border-radius: 20px;
+}
+#sinopse {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+.description {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 19px;
+  color: aliceblue;
+  width: fit-content;
+  text-align: justify;
+}
+.button {
+  width: 200px;
+  height: 60px;
+  background-color: #000000;
+  cursor: pointer;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: #14add8;
+  border-radius: 10px;
+  border-color: #14add8;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+.button:hover {
+  background-color: #14add8;
+  color: #000000;
+}
+
+/*ActorCards*/
+
+.actor-cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.cards-content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 50px;
+}
+.card {
+  width: 95%;
+  height: 600px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 20px 10px;
+  color: #14add8;
+  font-size: 17px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.banner-1 {
+  background-image: url(../Graphics/PB\ batman-robert-pattinson.jpg);
+  transition: 0.7s;
+}
+.banner-1:hover {
+  background-image: url(../Graphics/batman-robert-pattinson.jpg);
+}
+.banner-2 {
+  background-image: url(../Graphics/PB\ zoe-kravitz-the-batman-catwoman-schedule-1646663036.jpeg);
+}
+.banner-2:hover {
+  background-image: url(../Graphics/zoe-kravitz-the-batman-catwoman-schedule-1646663036.jpeg);
+}
+.banner-3 {
+  background-image: url(../Graphics/PB\ jeffrey-wright-the-batman-090225-3b6364151fca4e5ca54985c4ea79705a.jpg);
+}
+.banner-3:hover {
+  background-image: url(../Graphics/jeffrey-wright-the-batman-090225-3b6364151fca4e5ca54985c4ea79705a.jpg);
+}
+/* .division-lines {
+    width: 100%;
+  height: 250px;
+  background-image: url(../Graphics/bitmap\ lines.png);
+  background-size: cover;  
+} */
+
+footer {
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#logo-footer {
+  width: 18%;
+}
+span {
+  color: #14add8;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 10px;
+}
+
+.footer-navigation {
+  display: none;
+} /*aqui aplicamos o display none pq queremos que esse menu de navegacao somente apareca em dispositivos menores, celulares e tablets. assim, iremos usar a ferramenta @media para chamar o Media Query*/
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer-navigation {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #banner {
+    background-position: center;
+  }
+
+  #trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction:column;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+  }
+
+  .trailer{
+    width: 80%;
+  }
+
+  #sinopse {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+
+  .description{
+    width: 90%;
+  }
+
+  .button{
+    width: 95%;
+    margin-top: 30px;
+  }
+
+  .cards-content{
+    grid-template-columns: 1fr;
+    margin_top: 150px;
+  }
+  #logo{
+    width: 40%;
+    height: auto;
+  }
+  
+
+}
